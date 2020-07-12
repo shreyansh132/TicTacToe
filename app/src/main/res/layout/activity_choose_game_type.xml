@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseGameType"
+    android:background="@drawable/background1">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhiteTrans"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:layout_marginBottom="100dp"
+            android:text="Tic Tac Toe"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom">
+                    <!--Game Type Layout-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:id="@+id/gameTypeLayout"
+                        android:gravity="bottom|center"
+                        android:layout_marginBottom="50dp">
+                        <Button
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round"
+                            android:onClick="playOnline"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textAllCaps="false"
+                            android:layout_marginBottom="15dp"
+                            android:text="Play Online"
+                            android:textColor="@android:color/white" />
+                        <Button
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round"
+                            android:onClick="playOffline"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:textAllCaps="false"
+                            android:layout_marginBottom="15dp"
+                            android:text="Play Offline"
+                            android:textColor="@android:color/white" />
+                        <Button
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round"
+                            android:onClick="playWithComputer"
+                            android:textAllCaps="false"
+                            android:fontFamily="casual"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="15dp"
+                            android:text="Play with Computer"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                    <!--Online Game Layout-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:id="@+id/onlinePlayLayout"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:layout_marginTop="50dp"
+                            android:text="Enter your Friend's Room ID"
+                            android:textStyle="bold" />
+                        <!--Enter Into a Room Layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp">
+                            <EditText
+                                android:id="@+id/player2Name"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:hint="Enter your name"
+                                android:layout_weight="1"
+                                android:imeActionLabel="NEXT"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapSentences|textPersonName"
+                                android:textColor="@android:color/black" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="3"
+                                android:orientation="horizontal">
+                                <EditText
+                                    android:id="@+id/roomIdET"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:hint="Enter Room ID"
+                                    android:layout_weight="1"
+                                    android:imeActionLabel="NEXT"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textCapSentences|textPersonName"
+                                    android:textColor="@android:color/black" />
+                                <TextView
+                                    android:visibility="gone"
+                                    android:id="@+id/roomOwnerTV"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:hint="Enter Room ID"
+                                    android:layout_weight="1"
+                                    android:fontFamily="casual"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/colorPrimaryDark" />
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/round"
+                                    android:onClick="startOnline"
+                                    android:layout_weight="2"
+                                    android:id="@+id/findPlayerButton"
+                                    android:layout_marginLeft="5dp"
+                                    android:textAllCaps="false"
+                                    android:text="Find Player"
+                                    android:fontFamily="casual"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--Room Details Layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:id="@+id/myRoomLayout"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="casual"
+                                    android:gravity="center"
+                                    android:textSize="20sp"
+                                    android:text="My Room Id:"
+                                    android:textStyle="bold" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="casual"
+                                    android:gravity="center"
+                                    android:layout_marginStart="15dp"
+                                    android:id="@+id/roomIdTv"
+                                    android:textSize="22sp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:text="My Room Id:"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                            <Button
+                                android:layout_width="180dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/round"
+                                android:onClick="shareRoomId"
+                                android:layout_marginTop="40dp"
+                                android:textAllCaps="false"
+                                android:fontFamily="casual"
+                                android:text="Share Room ID"
+                                android:textColor="@android:color/white" />
+
+                        </LinearLayout>
+                        <!--Create Room Layout-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:id="@+id/createRoomLayout"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="casual"
+                                android:gravity="center"
+                                android:text="Create Your Own Room"
+                                android:textStyle="bold" />
+                            <EditText
+                                android:id="@+id/roomOwnerET"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:hint="Enter your Name"
+                                android:imeActionLabel="NEXT"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapSentences|textPersonName"
+                                android:textColor="@android:color/black" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="3"
+                                android:layout_marginTop="5dp">
+                                <EditText
+                                    android:id="@+id/roomNameET"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:hint="Create Room Name"
+                                    android:layout_weight="1"
+                                    android:imeActionLabel="NEXT"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textCapSentences|textPersonName"
+                                    android:textColor="@android:color/black" />
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/round"
+                                    android:onClick="createRoom"
+                                    android:layout_weight="2"
+                                    android:layout_marginLeft="5dp"
+                                    android:textAllCaps="false"
+                                    android:fontFamily="casual"
+                                    android:text="Create Room"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+</RelativeLayout>

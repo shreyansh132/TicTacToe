@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "675335742705",
+    "firebase_url": "https://tictictoe-39c28.firebaseio.com",
+    "project_id": "tictictoe-39c28",
+    "storage_bucket": "tictictoe-39c28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675335742705:android:c62188c4f4da59ffd0f550",
+        "android_client_info": {
+          "package_name": "com.shreyansh.tictictoe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675335742705-1fvra93sovdr342r34eibjvk6etb8lfc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shreyansh.tictictoe",
+            "certificate_hash": "019e76bbb0f189ad6e60e0f9f2c281c44ef176fc"
+          }
+        },
+        {
+          "client_id": "675335742705-5evgvqhreoho1jloseg80uq8tii4m2ej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs4worfuJvz7hkI3Op1LVqIg6BHPpcwuU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675335742705-5evgvqhreoho1jloseg80uq8tii4m2ej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
